@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Model
  *
  * @ORM\Table(name="model")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass=App\Repository\ModelRepository::class)
  */
 class Model
 {
@@ -44,6 +44,4 @@ class Model
 
         return $this;
     }
-
-
 }

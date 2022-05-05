@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-header">
-				<img src="{{asset('images/voiture1.jpg')}}" alt=""/>
+				<img src="{{asset('images/voitureSC1.jpg')}}" alt=""/>
 			</div>
 			<div class="card-body">
 				<span class="tag tag-teal">Sans chauffeur</span>
@@ -18,12 +18,15 @@
 				<p>
 					Cette formule donne droit à 4h pour un forfait de 150 kilomètres.
 				</p>
-				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+				<div>
+					<input type="radio" id="huey" name="drone" value="huey" checked>
+					<label for="huey">Je choisis la formule forfait 4h</label>
+				</div>
 			</div>
 		</div>
 		<div class="card">
 			<div class="card-header">
-				<img src="{{asset('images/voiture2.jpg')}}" alt=""/>
+				<img src="{{asset('images/voitureSC2.jpg')}}" alt=""/>
 			</div>
 			<div class="card-body">
 				<span class="tag tag-teal">Sans Chauffeur</span>
@@ -35,12 +38,15 @@
 					Cette formule donne droit à 24h pour un forfait de 300 kilomètres.
 
 				</p>
-				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+				<div>
+					<input type="radio" id="huey" name="drone" value="huey" checked>
+					<label for="huey">Je choisis la formule forfait 24h</label>
+				</div>
 			</div>
 		</div>
 		<div class="card">
 			<div class="card-header">
-				<img src="{{asset('images/voiture3.webp')}}" alt=""/>
+				<img src="{{asset('images/voitureSC3.webp')}}" alt=""/>
 			</div>
 			<div class="card-body">
 				<span class="tag tag-teal">Sans Chauffeur</span>
@@ -51,12 +57,15 @@
 				<p>
 					Cette formule donne droit à 48h pour un forfait de 700 kilomètres.
 				</p>
-				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+				<div>
+					<input type="radio" id="huey" name="drone" value="huey" checked>
+					<label for="huey">Je choisis la formule forfait 48h</label>
+				</div>
 			</div>
 		</div>
 		<div class="card">
 			<div class="card-header">
-				<img src="{{asset('images/voiture4.jpg')}}" alt=""/>
+				<img src="{{asset('images/voitureAC1.jpg')}}" alt=""/>
 			</div>
 			<div class="card-body">
 				<span class="tag tag-pink">Avec Chauffeur</span>
@@ -67,7 +76,10 @@
 				<p>
 					Cette formule a toujours la même durée de location : 24h.
 				</p>
-				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+				<div>
+					<input type="radio" id="huey" name="drone" value="huey" checked>
+					<label for="huey">Je choisis la formule avec chauffeur</label>
+				</div>
 			</div>
 		</div>
 	{% endblock %}
