@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+{% endblock %}
+{% block body %}
+	<br><br><br><br><br>
+	<div class="container">
+		<div class="card">
+			<div class="card-header">
+				<img src="{{asset('images/voiture1.jpg')}}" alt=""/>
+			</div>
+			<div class="card-body">
+				<span class="tag tag-teal">Sans chauffeur</span>
+				<br>
+				<h4>
+					Formule "Forfait 4h"
+				</h4>
+				<p>
+					Cette formule donne droit à 4h pour un forfait de 150 kilomètres.
+				</p>
+				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<img src="{{asset('images/voiture2.jpg')}}" alt=""/>
+			</div>
+			<div class="card-body">
+				<span class="tag tag-teal">Sans Chauffeur</span>
+				<br>
+				<h4>
+					Formule "Forfait 24h"
+				</h4>
+				<p>
+					Cette formule donne droit à 24h pour un forfait de 300 kilomètres.
+
+				</p>
+				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<img src="{{asset('images/voiture3.webp')}}" alt=""/>
+			</div>
+			<div class="card-body">
+				<span class="tag tag-teal">Sans Chauffeur</span>
+				<br>
+				<h4>
+					Formule "Forfait 48h"
+				</h4>
+				<p>
+					Cette formule donne droit à 48h pour un forfait de 700 kilomètres.
+				</p>
+				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<img src="{{asset('images/voiture4.jpg')}}" alt=""/>
+			</div>
+			<div class="card-body">
+				<span class="tag tag-pink">Avec Chauffeur</span>
+				<br>
+				<h4>
+					Formule avec chauffeur
+				</h4>
+				<p>
+					Cette formule a toujours la même durée de location : 24h.
+				</p>
+				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Reserver</a>
+			</div>
+		</div>
+	{% endblock %}

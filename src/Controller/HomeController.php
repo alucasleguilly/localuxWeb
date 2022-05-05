@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -19,11 +21,11 @@ class HomeController extends AbstractController
     }
 
     /**
-     *  @Route("/login", name="login")
+     * @Route("/reservation", name="reservation")
      */
-    public function Login(): Response
+    public function reservation(): Response
     {
-        return $this->render('home/login.html.twig', [
+        return $this->render('home/reservation.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }

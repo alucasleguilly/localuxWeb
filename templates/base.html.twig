@@ -13,7 +13,7 @@
 		<link
 		rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																																																																																																																																																																																								           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																																																																																																																																																																																																		           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
@@ -31,12 +31,17 @@
 								<a class="nav-link" style="color:white" href="{{path('home')}}">Accueil</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" style="color:white" href="">Reservation</a>
-							</li>
-							<li class="nav-item">
-								<a class="btn btn-success" style="background-color: #2ABA2D; color:white;" href="{{path('login')}}">Connexion</a>
+								<a class="nav-link" style="color:white" href="{{path('reservation')}}">Reservation</a>
 							</li>
 						</ul>
+						{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+							<a style="color:white; margin-right:5%;">{{ app.user.lastName }}
+								{{app.user.firstName}}</a>
+							<a class="btn btn-danger" href="{{path('security_logout')}}">Se déconnecter</a>
+						{% else %}
+							<a class="btn btn" href="{{path('security_login')}}" style="background-color: #2ABA2D; color:white;">Se connecter</a>
+						{% endif %}
+
 					</div>
 				</nav>
 			</div>
