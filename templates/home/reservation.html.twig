@@ -65,21 +65,25 @@
 		</div>
 		<div class="card">
 			<div class="card-header">
-				<img src="{{asset('images/voitureAC1.jpg')}}" alt=""/>
-			</div>
-			<div class="card-body">
-				<span class="tag tag-pink">Avec Chauffeur</span>
-				<br>
-				<h4>
-					Formule avec chauffeur
-				</h4>
-				<p>
-					Cette formule a toujours la même durée de location : 24h.
-				</p>
-				<div>
-					<input type="radio" id="huey" name="drone" value="huey" checked>
-					<label for="huey">Je choisis la formule avec chauffeur</label>
-				</div>
+				<label for="vehicle" style="">Choississez votre vehicule</label>
+				<select class="form-select" name="vehicle" id="vehicle">
+					{% for lesModels in model %}
+						<option value="{{lesModels.id}}">{{lesModels.name}}</option>
+					{% endfor %}
+				</select>
 			</div>
 		</div>
+		<div class="card">
+			<div class="card-header">
+				<label for="meeting-time">Choississez votre date et heure de location</label>
+
+				<input type="datetime-local" id="meeting-time" name="meeting-time">
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<a class="btn btn" href="" style="background-color: #2ABA2D; color:white;">Valider la Reservation</a>
+			</div>
+		</div>
+
 	{% endblock %}
